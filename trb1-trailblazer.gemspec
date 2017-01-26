@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-# stub: trailblazer 1.1.1 ruby lib
+# stub: trb1-trailblazer 1.1.1 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "trb1-trailblazer".freeze
