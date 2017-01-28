@@ -1,6 +1,6 @@
 require "trb1-trailblazer/operation"
 require "trb1-trailblazer/version"
-require "uber/inheritable_attr"
+require "trb1-uber/inheritable_attr"
 
 module Trb1
   module Trailblazer

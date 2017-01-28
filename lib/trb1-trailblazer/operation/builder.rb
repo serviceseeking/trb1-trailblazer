@@ -1,9 +1,10 @@
-require "uber/builder"
+require "trb1-uber/inheritable_attr"
+require "trb1-uber/builder"
 
 # Allows to add builders via ::builds.
 module Trb1::Trailblazer::Operation::Builder
   def self.extended(extender)
-    extender.send(:include, Uber::Builder)
+    extender.send(:include, Trb1::Uber::Builder)
   end
 
   def builder_class
@@ -17,7 +18,7 @@ module Trb1::Trailblazer::Operation::Builder
 private
   # Runs the builders for this operation class to figure out the actual class.
   def build_operation_class(*args)
-    class_builder(self).(*args) # Uber::Builder::class_builder(context)
+    class_builder(self).(*args) # Trb1::Uber::Builder::class_builder(context)
   end
 
   def build_operation(params, options={})

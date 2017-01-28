@@ -6,7 +6,7 @@ module Trb1
       require "trb1-trailblazer/operation/builder"
       extend Builder # imports ::builder_class and ::build_operation.
 
-      extend Uber::InheritableAttr
+      extend Trb1::Uber::InheritableAttr
       inheritable_attr :contract_class
       self.contract_class = Reform::Form.clone
 

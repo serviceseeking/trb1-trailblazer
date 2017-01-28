@@ -15,7 +15,7 @@ module Trb1
 
         module ClassMethods
           def policy(callable=nil, &block)
-            self.policy_config = Uber::Options::Value.new(callable || block)
+            self.policy_config = Trb1::Uber::Options::Value.new(callable || block)
           end
         end
 

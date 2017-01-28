@@ -3,7 +3,7 @@ class Trb1::Trailblazer::Operation
     # Imports ::model and ::action into an operation.
     module DSL
       def self.extended(extender)
-        extender.extend Uber::InheritableAttr
+        extender.extend Trb1::Uber::InheritableAttr
         extender.inheritable_attr :config
         extender.config = {}
       end
