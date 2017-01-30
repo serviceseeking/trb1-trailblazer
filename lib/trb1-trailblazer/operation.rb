@@ -1,4 +1,4 @@
-require "reform"
+require "trb1-reform"
 
 module Trb1
   module Trailblazer
@@ -8,7 +8,7 @@ module Trb1
 
       extend Trb1::Uber::InheritableAttr
       inheritable_attr :contract_class
-      self.contract_class = Reform::Form.clone
+      self.contract_class = Trb1::Reform::Form.clone
 
       class << self
         def run(params, &block) # Endpoint behaviour
