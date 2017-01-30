@@ -23,8 +23,8 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<trb1-uber>.freeze, [">= 0.0.15"])
-      s.add_runtime_dependency(%q<reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
-      s.add_runtime_dependency(%q<declarative>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<trb1-reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
+      s.add_runtime_dependency(%q<trb1-declarative>.freeze, [">= 0"])
       s.add_development_dependency(%q<activemodel>.freeze, [">= 0"])
       s.add_development_dependency(%q<bundler>.freeze, [">= 0"])
       s.add_development_dependency(%q<rake>.freeze, [">= 0"])
@@ -34,8 +34,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<roar>.freeze, [">= 0"])
     else
       s.add_dependency(%q<trb1-uber>.freeze, [">= 0.0.15"])
-      s.add_dependency(%q<reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
-      s.add_dependency(%q<declarative>.freeze, [">= 0"])
+      s.add_dependency(%q<trb1-reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
+      s.add_dependency(%q<trb1-declarative>.freeze, [">= 0"])
       s.add_dependency(%q<activemodel>.freeze, [">= 0"])
       s.add_dependency(%q<bundler>.freeze, [">= 0"])
       s.add_dependency(%q<rake>.freeze, [">= 0"])
@@ -46,8 +46,8 @@ Gem::Specification.new do |s|
     end
   else
     s.add_dependency(%q<trb1-uber>.freeze, [">= 0.0.15"])
-    s.add_dependency(%q<reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
-    s.add_dependency(%q<declarative>.freeze, [">= 0"])
+    s.add_dependency(%q<trb1-reform>.freeze, ["< 3.0.0", ">= 2.0.0"])
+    s.add_dependency(%q<trb1-declarative>.freeze, [">= 0"])
     s.add_dependency(%q<activemodel>.freeze, [">= 0"])
     s.add_dependency(%q<bundler>.freeze, [">= 0"])
     s.add_dependency(%q<rake>.freeze, [">= 0"])

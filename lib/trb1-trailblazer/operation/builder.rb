@@ -1,4 +1,3 @@
-require "trb1-uber/inheritable_attr"
 require "trb1-uber/builder"
 
 # Allows to add builders via ::builds.

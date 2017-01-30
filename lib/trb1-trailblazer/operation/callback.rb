@@ -1,12 +1,12 @@
-require "declarative"
-require "disposable/callback"
+require "trb1-declarative"
+require "trb1-disposable/callback"
 
 module Trb1::Trailblazer::Operation::Callback
   def self.included(base)
     base.extend ClassMethods
 
-    base.extend Declarative::Heritage::Inherited
-    base.extend Declarative::Heritage::DSL
+    base.extend Trb1::Declarative::Heritage::Inherited
+    base.extend Trb1::Declarative::Heritage::DSL
   end
 
   def callback!(name=:default, options={ operation: self, contract: contract, params: @params }) # FIXME: test options.
@@ -43,7 +43,7 @@ module Trb1::Trailblazer::Operation::Callback
       heritage.record(:add_callback, name, constant, &block)
 
       callbacks[name] ||= {
-        group:   Class.new(constant || Disposable::Callback::Group),
+        group:   Class.new(constant || Trb1::Disposable::Callback::Group),
         context: constant ? nil : :operation # `context: :operation` when the callback is inline. `context: group` otherwise.
       }
 

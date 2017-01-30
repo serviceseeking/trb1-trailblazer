@@ -30,19 +30,19 @@ module Trb1::Trailblazer::Operation::Representer
       self._representer_class = constant
     end
 
-    require "disposable/version"
+    require "trb1-disposable/version"
     def infer_representer_class
-      if Disposable::VERSION =~ /^0.1/
+      if Trb1::Disposable::VERSION =~ /^0.1/
         warn "[Trailblazer] Reform 2.0 won't be supported in Trailblazer 1.2. Don't be lazy and upgrade to Reform 2.1."
 
-        Disposable::Twin::Schema.from(contract_class,
+        Trb1::Disposable::Twin::Schema.from(contract_class,
           include:          [Representable::JSON],
           options_from:     :deserializer, # use :instance etc. in deserializer.
           superclass:       Representable::Decorator,
           representer_from: lambda { |inline| inline.representer_class },
         )
       else
-        Disposable::Rescheme.from(contract_class,
+        Trb1::Disposable::Rescheme.from(contract_class,
           include:          [Representable::JSON],
           options_from:     :deserializer, # use :instance etc. in deserializer.
           superclass:       Representable::Decorator,
