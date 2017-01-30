@@ -36,16 +36,16 @@ module Trb1::Trailblazer::Operation::Representer
         warn "[Trailblazer] Reform 2.0 won't be supported in Trailblazer 1.2. Don't be lazy and upgrade to Reform 2.1."
 
         Trb1::Disposable::Twin::Schema.from(contract_class,
-          include:          [Representable::JSON],
+          include:          [Trb1::Representable::JSON],
           options_from:     :deserializer, # use :instance etc. in deserializer.
-          superclass:       Representable::Decorator,
+          superclass:       Trb1::Representable::Decorator,
           representer_from: lambda { |inline| inline.representer_class },
         )
       else
         Trb1::Disposable::Rescheme.from(contract_class,
-          include:          [Representable::JSON],
+          include:          [Trb1::Representable::JSON],
           options_from:     :deserializer, # use :instance etc. in deserializer.
-          superclass:       Representable::Decorator,
+          superclass:       Trb1::Representable::Decorator,
           definitions_from: lambda { |inline| inline.definitions },
           exclude_options:  [:default, :populator], # TODO: test with populator: in an operation.
           exclude_properties: [:persisted?]
