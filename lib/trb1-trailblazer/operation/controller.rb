@@ -22,7 +22,7 @@ private
     op
   end
 
-  def run(operation_class, options={}, &block)
+  def v1_run(operation_class, options={}, &block)
     res, op = operation_for!(operation_class, options) { |params| operation_class.run(params) }
 
     yield op if res and block_given?
